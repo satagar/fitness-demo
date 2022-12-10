@@ -70,7 +70,6 @@ const update = async (req, res) => {
 
 const destroy = (req, res) => {
     if(!isObjectId(req.params.id)) return handleNotFoundResponse(res, 'Invalid ID');
-    if(req.params.id === req.user.id) return handleBadRequestResponse(res, 'Cannot delete Self');
     HealthLog.findById(req.params.id).then(data => {
         if(data) {
             data.deleteOne({ _id: req.params.id }).then(data => {
