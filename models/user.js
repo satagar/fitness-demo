@@ -49,7 +49,6 @@ const userSchema = mongoose.Schema({
 }, {
     timestamps: true,
     statics: {
-        bloodGroups: bloodGroups,
         genders: genders,
         async authenticate(email, password) {
             const user = await this.findOne({ email: email }).select('password');
