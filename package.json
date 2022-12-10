@@ -4,7 +4,10 @@
   "description": "Create API for Fitness app",
   "main": "index.js",
   "scripts": {
-    "test": "jest --silent=false --testEnvironment=node --runInBand --detectOpenHandles --coverage ./tests"
+    "test": "jest --silent=false --testEnvironment=node --runInBand --detectOpenHandles --coverage ./tests",
+    "server": "nodemon index.js",
+    "crypto": "node -e \"console.log(require('crypto').randomBytes(64).toString('hex'))\"",
+    "seeders": "node seeders seed"
   },
   "repository": {
     "type": "git",
