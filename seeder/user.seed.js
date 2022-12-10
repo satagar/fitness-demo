@@ -1,0 +1,25 @@
+const userData = [{
+    name:"ramu",
+    email:"ramu@gmail.com",
+    phone:9012454878,
+    symptoms:{
+        title:"fever"
+    }
+},
+{
+    name:"raju",
+    email:"raju@gmail.com",
+    phone:9864654545,
+    symptoms:{
+        title:"cold"
+    }
+},
+{
+    name:"himesh",
+    email:"himesh@gmail.com",
+    phone:954545455,
+    symptoms:{
+        title:"pain"
+    }
+}
+]
