@@ -16,12 +16,19 @@ const user = new mongoose.Schema({
         required:true
     },
     symptoms:{
-        type:Object,
         title:{
             type:String
         },
         description:{
             type:String
+        }
+    },
+    startTreatment:{
+        startdate:String,
+        enddate:String,
+        treatmentStatus:{
+            type:String,
+            default:"RUNING"
         }
     },
     belongHospital:{
