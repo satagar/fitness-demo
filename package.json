@@ -1,0 +1,42 @@
+{
+  "name": "fitness",
+  "version": "1.0.0",
+  "description": "Create API for Fitness app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --silent=false --testEnvironment=node --runInBand --detectOpenHandles --coverage ./tests",
+    "server": "nodemon index.js",
+    "crypto": "node -e \"console.log(require('crypto').randomBytes(64).toString('hex'))\"",
+    "seeders": "node seeders seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samiksengupta/fitness-demo.git"
+  },
+  "keywords": [
+    "fitness",
+    "nodejs",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samiksengupta/fitness-demo/issues"
+  },
+  "homepage": "https://github.com/samiksengupta/fitness-demo#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "jest": "^29.3.1",
+    "mongodb-memory-server": "^8.10.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.8.0"
+  }
+}
