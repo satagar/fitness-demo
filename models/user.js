@@ -2,7 +2,6 @@ const { default: mongoose } = require("mongoose");
 const { hashPassword, comparePassword } = require("../helpers");
 
 const genders = ['male', 'female'];
-const bloodGroups = ['a', 'b', 'ab', 'o'];
 
 const userSchema = mongoose.Schema({
     name: {
@@ -25,43 +24,23 @@ const userSchema = mongoose.Schema({
         type: String,
         enum: genders,
     },
-    height: {
-        type: Number,
-        required: true
+    healthLogs: {
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'healthLog'
+        }]
     },
-    weight: {
-        type: Number,
-        required: true
-    },
-    bloodGroup: {
-        type: String,
-        enum: bloodGroups,
-        required: true
-    },
-    bloodPressure: {
-        type: Number,
-        required: false
-    },
-    pulse: {
-        type: Number,
-        required: false
-    },
-    oxygenLevel: {
-        type: Number,
-        required: false
+    prescriptions: {
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'prescription'
+        }]
     },
     appointments: {
-        type: [
-            {
-                doctor: {
-                    type: mongoose.Schema.Types.ObjectId,
-                    ref: 'doctor'
-                },
-                date: {
-                    type: Date
-                }
-            }
-        ],
+        type: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'appointment'
+        }]
     },
     refreshToken: {
         type: String,
