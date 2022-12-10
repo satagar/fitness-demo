@@ -24,7 +24,7 @@ apiRouterSecure.route('/logs')
     .get(authorize, healthLogController.index)
     .post(authorize, validator.healthLogCreate, healthLogController.create);
 
-apiRouterSecure.route('/students/:id')
+apiRouterSecure.route('/logs/:id')
     .get(authorize, healthLogController.read)
     .put(authorize, validator.healthLogUpdate, healthLogController.update)
     .delete(authorize, healthLogController.destroy);
